@@ -4,7 +4,7 @@ vars:
   GOOS: "{{default OS .GOOS}}"
   GRADLEW: '{{if eq .GOOS "windows"}}gradlew.bat{{else}}./gradlew{{end}}'
   SLEEP_CMD: '{{if eq .GOOS "windows"}}timeout{{else}}sleep{{end}}'
-  IMAGE_NAME: 'sivaprasadreddy/meetup'
+  IMAGE_NAME: 'sivaprasadreddy/chitchat-kotlin'
   DC_FILE: "compose.yaml"
 
 tasks:

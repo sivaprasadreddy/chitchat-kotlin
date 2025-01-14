@@ -6,8 +6,8 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 @ConfigurationPropertiesScan
-class MeetupApplication
+class ChitChatApplication
 
 fun main(args: Array<String>) {
-    runApplication<MeetupApplication>(*args)
+    runApplication<ChitChatApplication>(*args)
 }
