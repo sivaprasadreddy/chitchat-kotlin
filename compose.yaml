@@ -1,0 +1,26 @@
+services:
+  meetup-db:
+    image: 'postgres:17'
+    container_name: meetup-db
+    environment:
+      - 'POSTGRES_DB=postgres'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'
+  meetup:
+    image: sivaprasadreddy/meetup
+    container_name: meetup
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
+      SPRING_DATASOURCE_URL: jdbc:postgresql://meetup-db:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - meetup-db
+    restart: unless-stopped
+    profiles:
+      - app
