@@ -10,9 +10,9 @@ plugins {
     kotlin("jvm") version "2.1.0"
     kotlin("plugin.spring") version "2.1.0"
     kotlin("plugin.jpa") version "2.1.0"
-    id("org.cyclonedx.bom") version "1.10.0"
+    id("org.cyclonedx.bom") version "2.0.0"
     id("com.gorylenko.gradle-git-properties") version "2.4.2"
-    id("com.diffplug.spotless") version "7.0.0.BETA4"
+    id("com.diffplug.spotless") version "7.0.2"
 }
 
 group = "com.sivalabs"
@@ -106,7 +106,7 @@ gitProperties {
 spotless {
     kotlin {
         trimTrailingWhitespace()
-        indentWithSpaces(4)
+        leadingTabsToSpaces(4)
         endWithNewline()
         ktlint("1.4.1")
     }

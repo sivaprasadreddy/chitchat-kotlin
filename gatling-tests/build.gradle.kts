@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    java
     id("io.gatling.gradle") version "3.13.1.2"
 }
 
@@ -12,8 +12,4 @@ java {
 repositories {
     mavenLocal()
     mavenCentral()
-}
-
-dependencies {
-    testImplementation("io.gatling:gatling-http-java:3.13.1")
 }

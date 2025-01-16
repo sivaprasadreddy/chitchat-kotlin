@@ -1,4 +1,4 @@
-package utils;
+package chitchat;
 
 import com.typesafe.config.Config;
 import io.gatling.javaapi.http.HttpDsl;

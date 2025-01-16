@@ -2,12 +2,11 @@ package chitchat;
 
 import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
-import utils.SimulationHelper;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.http;
 import static io.gatling.javaapi.http.HttpDsl.status;
-import static utils.SimulationHelper.getConfig;
+import static chitchat.SimulationHelper.getConfig;
 
 public class CreatePostSimulation extends Simulation {
 
