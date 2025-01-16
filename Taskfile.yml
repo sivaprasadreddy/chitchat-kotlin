@@ -5,7 +5,7 @@ vars:
   GRADLEW: '{{if eq .GOOS "windows"}}gradlew.bat{{else}}./gradlew{{end}}'
   SLEEP_CMD: '{{if eq .GOOS "windows"}}timeout{{else}}sleep{{end}}'
   IMAGE_NAME: 'sivaprasadreddy/chitchat-kotlin'
-  DC_FILE: "compose.yaml"
+  DC_FILE: "docker/compose.yaml"
 
 tasks:
   default:
@@ -39,7 +39,9 @@ tasks:
       - task: stop
       - task: sleep
       - task: start
-
+  gatling:
+    cmds:
+      - "{{.GRADLEW}} gatlingRun --all"
   sleep:
     vars:
       DURATION: "{{default 5 .DURATION}}"

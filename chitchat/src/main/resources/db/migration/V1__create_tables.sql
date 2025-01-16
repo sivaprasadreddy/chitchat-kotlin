@@ -26,3 +26,16 @@ create table posts
     primary key (id),
     constraint posts_uid_unique unique (uid)
 );
+
+create sequence fav_id_seq start with 100 increment by 50;
+
+create table user_favourites
+(
+    id         bigint       not null default nextval('fav_id_seq'),
+    user_id    bigint       not null references users (id),
+    post_id    bigint       not null references posts (id),
+    created_at timestamp    not null,
+    updated_at timestamp,
+    primary key (id),
+    constraint user_favourites_unique unique (user_id, post_id)
+);

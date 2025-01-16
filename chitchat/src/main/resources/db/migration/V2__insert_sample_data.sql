@@ -14,3 +14,10 @@ insert into posts(id, uid, content, created_by, created_at) values
 (8,'2d0925a3-d11c-4177-8c54-ab4891b9a866','As a Java Developer, I like #Angular.',2, '2014-04-16'),
 (9,'a299b589-c41c-42cd-8560-5ddaa1ca270f','#Terraform or AWSCDK?',2, '2014-05-10')
 ;
+
+insert into user_favourites(user_id, post_id, created_at) values
+(1, 1, CURRENT_TIMESTAMP),
+(1, 2, CURRENT_TIMESTAMP),
+(2, 1, CURRENT_TIMESTAMP),
+(2, 6, CURRENT_TIMESTAMP),
+(2, 8, CURRENT_TIMESTAMP);

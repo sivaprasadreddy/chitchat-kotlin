@@ -8,6 +8,7 @@ data class PostDto(
     val uid: String,
     val content: String,
     val userName: String,
+    val liked: Boolean,
     val createdAt: LocalDateTime,
     val updatedAt: LocalDateTime?,
 ) {

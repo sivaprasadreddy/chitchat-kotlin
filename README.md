@@ -42,6 +42,9 @@ Run `src/main/kotlin/com/sivalabs/chitchat/ChitChatApplication.kt` from IDE.
 
 # Run application using Gradle
 ./gradlew bootRun
+
+# Run gatling tests using Gradle
+./gradlew :gatling-tests:gatlingRun --all
 ```
 
 * Application: http://localhost:8080
@@ -91,4 +94,7 @@ $ task build_image
 $ task start
 $ task stop
 $ task restart
+
+# Run gatling tests using Gradle
+$ task gatling
 ```
